@@ -8,7 +8,7 @@ haskellPackages = super.haskellPackages.override {
     hmatrix-backprop = self.haskell.lib.dontCheck hsOld.hmatrix-backprop_0_1_2_4;
 
     # add new versions of these packages
-    Frames = hsNew.callPackage ./Frames.nix {};
+    Frames = self.haskell.lib.dontCheck (hsNew.callPackage ./Frames.nix {});
     vinyl = self.haskell.lib.dontCheck (hsNew.callPackage ./vinyl.nix {});
 
     }; # overrides
