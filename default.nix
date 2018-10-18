@@ -6,6 +6,7 @@ haskellPackages = super.haskellPackages.override {
     # checks for this package fail
     backprop = hsOld.backprop_0_2_6_1 or hsOld.backprop;
     hmatrix-backprop = self.haskell.lib.dontCheck hsOld.hmatrix-backprop_0_1_2_4 or hsOld.hmatrix-backprop;
+    hmatrix-vector-sized = self.haskell.lib.dontCheck hsOld.hmatrix-vector-sized;
 
     # add new versions of these packages
     #Frames = self.haskell.lib.dontCheck (hsNew.callPackage ./Frames.nix {});
