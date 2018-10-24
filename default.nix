@@ -12,6 +12,7 @@ haskellPackages = super.haskellPackages.override {
     #Frames = self.haskell.lib.dontCheck (hsNew.callPackage ./Frames.nix {});
     # vinyl = self.haskell.lib.dontCheck (hsNew.callPackage ./vinyl.nix {});
     vinyl = hsOld.vinyl_0_10_0 or hsOld.vinyl;
+    megaparsec = hsOld.megaparsec_7_0_0 or hsOld.megaparsec;
 
     }; # overrides
   }; # override
