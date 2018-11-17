@@ -13,6 +13,8 @@ haskellPackages = super.haskellPackages.override {
     # vinyl = self.haskell.lib.dontCheck (hsNew.callPackage ./vinyl.nix {});
     vinyl = hsOld.vinyl_0_10_0 or hsOld.vinyl;
     megaparsec = hsOld.megaparsec_7_0_0 or hsOld.megaparsec;
+    SVGFonts = self.haskellPackages.callHackage "SVGFonts" "1.6.0.3" {};
+    # SVGFonts = (self.haskell.lib.packageSourceOverrides { SVGfonts = "1.6.0.3"; } self super).SVGfonts;
 
     }; # overrides
   }; # override
