@@ -17,6 +17,7 @@ haskellPackages = super.haskellPackages.override {
     megaparsec = hsOld.megaparsec_7_0_0 or hsOld.megaparsec;
     semirings = hsNew.callPackage ./semirings.nix {};
     Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {}; # (self.haskellPackages.callHackage "Chart-diagrams" "1.9.2" {});
+    Chart = hsNew.callPackage ./Chart.nix {};
 
     # SVGFonts = (self.haskellPackages.callHackage "SVGFonts" "1.6.0.3" {}); # or hsOld.SVGFonts;
     # SVGFonts = (self.haskell.lib.packageSourceOverrides { SVGfonts = "1.6.0.3"; } self super).SVGfonts;
