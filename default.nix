@@ -16,7 +16,7 @@ haskellPackages = super.haskellPackages.override {
     # vinyl = self.haskell.lib.dontCheck (hsNew.callPackage ./vinyl.nix {});
     # vinyl = hsOld.vinyl_0_10_0 or hsOld.vinyl;
     # megaparsec = hsOld.megaparsec_7_0_0 or hsOld.megaparsec;
-    # semirings = hsNew.callPackage ./semirings.nix {};
+    semirings = hsNew.callPackage ./semirings.nix {};
     Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
     Chart = hsNew.callPackage ./Chart.nix {};
 
