@@ -12,6 +12,8 @@ haskellPackages = super.haskellPackages.override {
     semirings = hsNew.callPackage ./semirings.nix {};
     Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
     Chart = hsNew.callPackage ./Chart.nix {};
+    polysemy = hsNew.callPackage ./polysemy.nix {};
+    type-errors = hsNew.callPackage ./type-errors.nix {};
 
     }; # overrides
   }; # override
