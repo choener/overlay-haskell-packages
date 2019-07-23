@@ -12,13 +12,6 @@ haskellPackages = super.haskellPackages.override {
     semirings = hsNew.callPackage ./semirings.nix {};
     Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
     Chart = hsNew.callPackage ./Chart.nix {};
-    # too much breaks
-    # polysemy = hsNew.callPackage ./polysemy.nix {};
-    # type-errors = hsNew.callPackage ./type-errors.nix {};
-    # first-class-families = hsNew.callPackage ./first-class-families.nix {};
-    # th-abstraction = hsNew.callPackage ./th-abstraction.nix {};
-    # inspection-testing = hsNew.callPackage ./inspection-testing.nix {};
-    # generic-deriving = hsNew.callPackage ./generic-deriving.nix {};
 
     }; # overrides
   }; # override
