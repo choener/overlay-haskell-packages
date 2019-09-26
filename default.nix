@@ -6,8 +6,15 @@ self: super: {
 haskellPackages = super.haskellPackages.override {
   overrides = hsNew: hsOld: rec {
 
-    hmatrix-backprop = self.haskell.lib.dontHaddock (self.haskell.lib.dontCheck (hsNew.callHackage "hmatrix-backprop" "0.1.2.5" {}));
-    streaming-cassava = self.haskell.lib.dontCheck (hsNew.callHackage "streaming-cassava" "0.1.0.1" {});
+    # hmatrix-backprop = self.haskell.lib.dontHaddock (self.haskell.lib.dontCheck (hsNew.callHackage "hmatrix-backprop" "0.1.2.5" {}));
+    # streaming-cassava = self.haskell.lib.dontCheck (hsNew.callHackage "streaming-cassava" "0.1.0.1" {});
+
+    # polysemy and dependencies
+    first-class-families = hsNew.callPackage ./first-class-families.nix {};
+    polysemy = self.haskell.lib.dontCheck (hsNew.callPackage ./polysemy.nix {});
+    th-abstraction = hsNew.callPackage ./th-abstraction.nix {};
+    type-errors = hsNew.callPackage ./type-errors.nix {};
+    type-errors-pretty = hsNew.callPackage ./type-errors-pretty.nix {};
 
     semirings = hsNew.callPackage ./semirings.nix {};
     Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
