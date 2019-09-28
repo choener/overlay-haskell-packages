@@ -10,15 +10,15 @@ haskellPackages = super.haskellPackages.override {
     # streaming-cassava = self.haskell.lib.dontCheck (hsNew.callHackage "streaming-cassava" "0.1.0.1" {});
 
     # polysemy and dependencies
-    first-class-families = hsNew.callPackage ./first-class-families.nix {};
-    polysemy = self.haskell.lib.dontCheck (hsNew.callPackage ./polysemy.nix {});
-    th-abstraction = hsNew.callPackage ./th-abstraction.nix {};
-    type-errors = hsNew.callPackage ./type-errors.nix {};
-    type-errors-pretty = hsNew.callPackage ./type-errors-pretty.nix {};
+    #first-class-families = hsNew.callPackage ./first-class-families.nix {};
+    #polysemy = self.haskell.lib.dontCheck (hsNew.callPackage ./polysemy.nix {});
+    #th-abstraction = hsNew.callPackage ./th-abstraction.nix {};
+    #type-errors = hsNew.callPackage ./type-errors.nix {};
+    #type-errors-pretty = hsNew.callPackage ./type-errors-pretty.nix {};
 
-    semirings = hsNew.callPackage ./semirings.nix {};
-    Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
-    Chart = hsNew.callPackage ./Chart.nix {};
+    #semirings = hsNew.callPackage ./semirings.nix {};
+    #Chart-diagrams = hsNew.callPackage ./Chart-diagrams.nix {};
+    #Chart = hsNew.callPackage ./Chart.nix {};
 
     }; # overrides
   }; # override
